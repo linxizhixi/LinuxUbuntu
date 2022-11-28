@@ -5,10 +5,21 @@
 #include <stdlib.h>
 #include <linux/input.h>
 #include <unistd.h>
-// beeper——kay
+
+#define INIT_BEEP (_IO('f', 8))
+#define BEEP_VOICE_UP (_IO('f', 9))
+#define BEEP_VOICE_DOWN (_IO('f', 10))
+#define EXIT_BEEP (_IO('f', 11))
+
 #define ESC_KEY  0x1b
 #define DEVICE_BEEPER		"/dev/input/event0"
 #define DEVICE_KEY			"/dev/input/event3"
+
+void Ioctl(int fd, unsigned long cmd, void* arg)
+{
+	if(ioctl(fd, cmd, arg))
+		perror("ioctl");
+}
 
 int main(int argc, char *argv[])
 {
@@ -21,7 +32,7 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	
-		// 第1步：打开设备文件
+	// 第1步：打开设备文件
 	fd_button = open(DEVICE_KEY, O_RDONLY);
 	if (fd_button < 0) {
 		perror("open");
