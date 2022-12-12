@@ -3,7 +3,7 @@ CFLAGS:= -mthumb -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 \
 	--sysroot=/opt/st/stm32mp1/3.1-openstlinux-5.4-dunfell-mp1-20-06-24/sysroots/cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi
 OBJS:= led1616.o main.o 
 LIBS:= 
-OUT:=keyled1616
+OUT:=show_name
 
 .PHONY: clean
 

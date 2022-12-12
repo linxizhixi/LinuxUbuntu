@@ -1,16 +1,10 @@
-/*
- * @Author: Dafu Wang
- * @Date: 2022-11-14 16:52:08
- * @LastEditTime: 2022-11-28 17:18:36
- * @LastEditors: Dafu Wang
- * @FilePath: \driver_sample\work1-keybeep\keybeep.c
- */
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+
 #include <fcntl.h>
 #include <linux/input.h>
+#include <stdio.h>
 #include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
 
 #define key_event_file "/dev/input/event3"
@@ -53,8 +47,8 @@ void key_init(void)
 }
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  * @return int 1按键按下 0按键抬起 -1按键空闲
  */
 int key_scan(void)
@@ -81,18 +75,18 @@ int key_scan(void)
 
 int main(int argc, char **argv)
 {
-    int key_val=0;
+    int key_val = 0;
     key_init();
     beep_init();
 
     while (1)
     {
-        key_val=key_scan();
-        if(key_scan()==1)
+        key_val = key_scan();
+        if (key_scan() == 1)
         {
             beep_on();
         }
-        else if(key_scan()==0)
+        else if (key_scan() == 0)
         {
             beep_off();
         }

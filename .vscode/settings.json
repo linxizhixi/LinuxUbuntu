@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "cmd_for_sensor.h": "c"
+        "cmd_for_sensor.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c",
+        "unistd.h": "c",
+        "led1616.h": "c"
     }
 }

@@ -1,3 +1,8 @@
+/*
+ * @Author: ZhuYongtao
+ * @Date: 2022-12-09 00:49:53
+ * @LastEditTime: 2022-12-09 00:57:38
+ */
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -13,17 +18,17 @@ void display(unsigned char *, unsigned  int);
 
 
 
-int main(int argc, char *argv[])
-{
-	// char *input = "ÕâÊÇÒ»¸öLEDµãÕóÏÔÊ¾Ê¾ÀıABCDabcd#!@#%^&";
-	char *input = "ÖìÓÀÌÎ3200515046";
-	size_t len = strlen(input);
-	while(1){
-		display(input, len);
-		sleep(2);
-	}
-	return 0;
-}
+// int main(int argc, char *argv[])
+// {
+// 	// char *input = "ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½LEDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ê¾ï¿½ï¿½ABCDabcd#!@#%^&";
+// 	char *input = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3200515046";
+// 	size_t len = strlen(input);
+// 	while(1){
+// 		display(input, len);
+// 		sleep(2);
+// 	}
+// 	return 0;
+// }
 
 unsigned int decode(unsigned char *code)
 {

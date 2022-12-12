@@ -17,7 +17,6 @@ void enter_fire_detect(int fd)
 	int cmd, i=10;
 	unsigned char arg;
 
-
 	printf("<<<<fire detect>>>>>\n");
 	printf("=====>>input 0 to quit\n");
 	printf("=====>>input 1 to get status\n");
@@ -441,7 +440,7 @@ void enter_dht11(int fd)
 	}
 
 }
-
+	
 void enter_HCSR04(int fd)
 {
 	int cmd, i = 10;
