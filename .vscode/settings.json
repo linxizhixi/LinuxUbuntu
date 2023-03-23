@@ -4,6 +4,8 @@
         "stdio.h": "c",
         "stdlib.h": "c",
         "unistd.h": "c",
-        "led1616.h": "c"
+        "led1616.h": "c",
+        "mux.h": "c",
+        "add.h": "c"
     }
 }
